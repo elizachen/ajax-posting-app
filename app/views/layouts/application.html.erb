@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
+      <% if flash[:notice] %>
       <%= flash[:notice] %>
     <% end %>
 
@@ -32,5 +32,6 @@
     <%= link_to "jQuery 练习五", jquery_5_path %>
 
     <%= yield %>
+  
   </body>
 </html>
