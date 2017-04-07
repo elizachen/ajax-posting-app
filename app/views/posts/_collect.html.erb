@@ -1,0 +1,11 @@
+<% if post.collection_users.any? %>
+  <%= post.collection_users.map{ |u| u.display_name }.join(",") %> 收藏了
+<% end %>
+
+<% if current_user # 有登入才可以按讚 %>
+  <% if post.find_collection(current_user) %>
+    <%= link_to "取消收藏", uncollect_post_path(post), :method => :post, :remote => true, :class => "btn btn-warning" %>
+  <% else %>
+    <%= link_to "收藏", collect_post_path(post), :method => :post, :remote => true, :class => "btn btn-warning" %>
+  <% end %>
+<% end %>
