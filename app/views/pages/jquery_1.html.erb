@@ -7,11 +7,15 @@
 </div>
 
 <script>
+  console.log("A");
   $("#my-click").click(function(){
+    alert("test alert");
+    console.log("B");
     $("#foo").html('<h1>hahahahaha</h1>');
     $("p").prepend("<b>Prepended text</b>");
      $("p").append("<b>Appended text</b>");
       $("p").before("before world--1--!");
        $("p").after("after world--2-- !");
   })
+    console.log("C");
 </script>
