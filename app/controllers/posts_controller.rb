@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
     #  redirect_to posts_path
     # render :js => "alert('ok');"
+    render :json => { :id => @post.id }
    end
 
   def like

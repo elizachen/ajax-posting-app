@@ -19,8 +19,8 @@
 
      <% if current_user && post.user == current_user %>
 
-         <%= link_to "Delete", post_path(post), :method => :delete, :remote => true, :class => "btn btn-danger" %>
-
+        <!-- <%= link_to "Delete", post_path(post), :method => :delete, :remote => true, :class => "btn btn-danger" %> -->
+       <%= link_to "Delete", post_path(post),  :class => "btn btn-danger" %>
        <% end %>
 
         </p>
